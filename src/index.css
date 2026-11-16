@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #FF441F;
+  --color-primary-hover: #E63312;
+  --color-accent: #FFB703;
+  --bg-primary: #FAF8F5;
+  --bg-surface: #FFFFFF;
+  --text-main: #121316;
+  --text-muted: #596170;
+  --border-color: #E8E1D7;
+}
+
+.dark {
+  --color-primary: #FF5A26;
+  --color-primary-hover: #FF441F;
+  --color-accent: #FFB703;
+  --bg-primary: #0A0B0D;
+  --bg-surface: #15181E;
+  --text-main: #F4F4F6;
+  --text-muted: #9AA3B2;
+  --border-color: #262B35;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Hide scrollbar for category pills on mobile */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Veg / Non-Veg badge styling */
+.veg-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid #16A34A;
+  border-radius: 3px;
+  background-color: transparent;
+}
+.veg-badge::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: #16A34A;
+  border-radius: 50%;
+}
+
+.non-veg-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid #DC2626;
+  border-radius: 3px;
+  background-color: transparent;
+}
+.non-veg-badge::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 4.5px solid transparent;
+  border-right: 4.5px solid transparent;
+  border-bottom: 8px solid #DC2626;
+}
